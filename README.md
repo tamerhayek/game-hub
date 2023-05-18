@@ -7,3 +7,4 @@ Games Hub website made with React
 ##### Technologies
 
 -   React
+-   Chakra UI
