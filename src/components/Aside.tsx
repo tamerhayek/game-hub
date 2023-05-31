@@ -8,10 +8,12 @@ interface Props {
 
 const Aside = ({ handleSelectGenre, selectedGenre }: Props) => {
 	return (
-		<GenreList
-			handleSelectGenre={handleSelectGenre}
-			selectedGenre={selectedGenre}
-		/>
+		<>
+			<GenreList
+				handleSelectGenre={handleSelectGenre}
+				selectedGenre={selectedGenre}
+			/>
+		</>
 	);
 };
 
