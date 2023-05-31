@@ -13,11 +13,7 @@ const GameGrid = () => {
 	}
 
 	return (
-		<SimpleGrid
-			columns={{ sm: 1, md: 2, lg: 3 }}
-			spacing={10}
-			placeItems={"center"}
-		>
+		<SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={3} paddingX={3}>
 			{isLoading &&
 				skeletons.map((skeleton) => (
 					<GameCardContainer>

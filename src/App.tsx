@@ -10,17 +10,21 @@ function App() {
 				base: `"nav" "main"`,
 				lg: `"nav nav" "aside main"`,
 			}}
+			templateColumns={{
+				base: "1fr",
+				lg: "200px 1fr",
+			}}
 			gap={6}
 		>
-			<GridItem area='nav'>
+			<GridItem area="nav">
 				<Navbar />
 			</GridItem>
-			<Show above='lg'>
-				<GridItem area='aside'>
+			<Show above="lg">
+				<GridItem area="aside" paddingX={5}>
 					<Aside />
 				</GridItem>
 			</Show>
-			<GridItem area='main'>
+			<GridItem area="main">
 				<GameGrid />
 			</GridItem>
 		</Grid>
