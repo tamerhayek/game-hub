@@ -1,16 +1,19 @@
 import {
+	Button,
 	HStack,
 	Image,
 	List,
 	ListItem,
 	Skeleton,
-	SkeletonText,
-	Text,
 } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
+import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/imageUrl";
 
-const GenreList = () => {
+interface Props {
+	handleSelectGenre: (genre: Genre) => void;
+}
+
+const GenreList = ({ handleSelectGenre }: Props) => {
 	const { data, isLoading, error } = useGenres();
 	const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -39,7 +42,13 @@ const GenreList = () => {
 							boxSize={"32px"}
 							borderRadius={8}
 						/>
-						<Text fontSize={"lg"}>{genre.name}</Text>
+						<Button
+							fontSize={"lg"}
+							variant={"link"}
+							onClick={() => handleSelectGenre(genre)}
+						>
+							{genre.name}
+						</Button>
 					</HStack>
 				</ListItem>
 			))}
