@@ -42,8 +42,11 @@ const GenreList = ({ handleSelectGenre, selectedGenre }: Props) => {
 							alt={genre.name}
 							boxSize={"32px"}
 							borderRadius={8}
+							objectFit={"cover"}
 						/>
 						<Button
+							whiteSpace="normal"
+							textAlign="left"
 							fontSize={"lg"}
 							fontWeight={
 								selectedGenre?.id === genre.id
