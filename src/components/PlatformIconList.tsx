@@ -25,7 +25,7 @@ const PlatformIconList = ({ platforms }: Props) => {
 		playstation: FaPlaystation,
 		xbox: FaXbox,
 		nintendo: SiNintendo,
-		iphone: MdPhoneIphone,
+		ios: MdPhoneIphone,
 		android: FaAndroid,
 		web: BsGlobe,
 	};
