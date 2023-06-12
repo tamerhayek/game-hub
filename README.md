@@ -1,4 +1,4 @@
-# web-game-hub
+# project-game-hub
 
 Games Hub website made with React
 
