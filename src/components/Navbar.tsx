@@ -10,7 +10,13 @@ interface Props {
 const Navbar = ({ handleSearch }: Props) => {
 	return (
 		<HStack justifyContent="space-between" padding="10px" spacing={10}>
-			<Image src={logo} alt="Logo" boxSize="60px" />
+			<Image
+				src={logo}
+				alt="Logo"
+				boxSize="60px"
+				cursor={"pointer"}
+				onClick={() => window.location.reload()}
+			/>
 			<SearchInput handleSearch={handleSearch} />
 			<ColorModeSwitch />
 		</HStack>
