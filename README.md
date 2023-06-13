@@ -8,3 +8,7 @@ Games Hub website made with React
 
 -   React
 -   Chakra UI
+-   Rawg API
+
+##### [Demo Website](https://game-hub-tamerhayek.netlify.app/)
+
