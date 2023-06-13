@@ -1,14 +1,11 @@
-# project-game-hub
+# Game Hub
 
 Games Hub website made with React
+[Demo Website](https://game-hub-tamerhayek.netlify.app/)
 
-### Description of the project
-
-##### Technologies
+### Technologies
 
 -   React
 -   Chakra UI
 -   Rawg API
-
-##### [Demo Website](https://game-hub-tamerhayek.netlify.app/)
 
