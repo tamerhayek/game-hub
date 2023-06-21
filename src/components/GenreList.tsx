@@ -12,10 +12,10 @@ import getCroppedImageUrl from "../services/imageUrl";
 
 interface Props {
 	handleSelectGenre: (genre: Genre) => void;
-	selectedGenre: Genre | null;
+	selectedGenreId?: number;
 }
 
-const GenreList = ({ handleSelectGenre, selectedGenre }: Props) => {
+const GenreList = ({ handleSelectGenre, selectedGenreId }: Props) => {
 	const { data, isLoading, error } = useGenres();
 	const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -54,7 +54,7 @@ const GenreList = ({ handleSelectGenre, selectedGenre }: Props) => {
 								textAlign="left"
 								fontSize={"lg"}
 								fontWeight={
-									selectedGenre?.id === genre.id
+									selectedGenreId === genre.id
 										? "bold"
 										: "normal"
 								}

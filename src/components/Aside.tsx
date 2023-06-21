@@ -3,15 +3,15 @@ import GenreList from "./GenreList";
 
 interface Props {
 	handleSelectGenre: (genre: Genre) => void;
-	selectedGenre: Genre | null;
+	selectedGenreId?: number;
 }
 
-const Aside = ({ handleSelectGenre, selectedGenre }: Props) => {
+const Aside = ({ handleSelectGenre, selectedGenreId }: Props) => {
 	return (
 		<>
 			<GenreList
 				handleSelectGenre={handleSelectGenre}
-				selectedGenre={selectedGenre}
+				selectedGenreId={selectedGenreId}
 			/>
 		</>
 	);
