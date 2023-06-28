@@ -40,6 +40,7 @@ const GameGrid = ({ gameQuery }: Props) => {
 				columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
 				spacing={3}
 				paddingX={3}
+				alignItems={"stretch"}
 			>
 				{data?.pages.map((page, index) => (
 					<React.Fragment key={index}>
