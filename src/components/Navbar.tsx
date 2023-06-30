@@ -3,8 +3,10 @@ import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import Description from "./Description";
 import SearchInput from "./SearchInput";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+	const navigate = useNavigate();
 	return (
 		<Box padding={"10px"}>
 			<HStack justifyContent="space-between" spacing={10}>
@@ -13,7 +15,7 @@ const Navbar = () => {
 					alt="Logo"
 					boxSize="60px"
 					cursor={"pointer"}
-					onClick={() => window.location.reload()}
+					onClick={() => navigate("/")}
 				/>
 				<Show above="lg">
 					<SearchInput />
