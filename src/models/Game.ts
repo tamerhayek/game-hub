@@ -8,7 +8,7 @@ export interface Game {
 	slug: string;
 	genres: Genre[];
 	publishers: Publisher[];
-	description_raw: string;
+	description: string;
 	background_image: string;
 	parent_platforms: { platform: Platform }[];
 	metacritic: number;

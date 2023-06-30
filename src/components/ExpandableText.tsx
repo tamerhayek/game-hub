@@ -1,5 +1,5 @@
 import { Button, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
 	children: string;
@@ -17,9 +17,15 @@ const ExpandableText = ({ children }: Props) => {
 
 	const text = expanded ? children : children.substring(0, limit) + "...";
 
+	const ref = useRef<HTMLParagraphElement>(null);
+
+	useEffect(() => {
+		if (ref && ref.current) ref.current.innerHTML = text;
+	}, [expanded]);
+
 	return (
 		<>
-			<Text marginBottom={3}>{text}</Text>
+			<Text ref={ref} marginBottom={3}></Text>
 			<Button
 				fontWeight={"bold"}
 				colorScheme="blue"
