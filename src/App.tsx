@@ -6,6 +6,7 @@ import GenreList from "./components/GenreList";
 import Navbar from "./components/Navbar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
+import GenreSelector from "./components/GenreSelector";
 
 function App() {
 	return (
@@ -31,7 +32,10 @@ function App() {
 			<GridItem area="main">
 				<Box paddingLeft={3} marginBottom={3}>
 					<GameHeading />
-					<Flex gap={3} paddingY={3}>
+					<Flex gap={3} paddingY={3} flexWrap={"wrap"}>
+						<Show below="lg">
+							<GenreSelector />
+						</Show>
 						<PlatformSelector />
 						<SortSelector />
 					</Flex>
