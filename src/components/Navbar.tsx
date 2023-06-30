@@ -6,7 +6,7 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
 	return (
 		<Box padding={"10px"}>
-			<HStack justifyContent="space-between" spacing={10} paddingY={5}>
+			<HStack justifyContent="space-between" spacing={10}>
 				<Image
 					src={logo}
 					alt="Logo"

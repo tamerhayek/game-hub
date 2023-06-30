@@ -5,16 +5,15 @@ const Footer = () => {
 		<Flex
 			justifyContent={"center"}
 			alignItems={"center"}
-			minHeight={"250px"}
 			flexDirection={"column"}
 			gap={3}
-			padding={3}
-			textAlign={"center"}
+			padding={5}
+			position={"fixed"}
 		>
 			<Heading as={"h3"} size={"xl"}>
 				Made by Tamer Hayek
 			</Heading>
-			<Flex gap={2} marginBottom={3}>
+			<Flex gap={2}>
 				<Link href="https://tamerhayek.com" color={"blue.400"}>
 					My Portfolio
 				</Link>{" "}
