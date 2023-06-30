@@ -1,17 +1,23 @@
 import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
 import { Game } from "../hooks/useGames";
-import PlatformIconList from "./PlatformIconList";
-import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/imageUrl";
+import CriticScore from "./CriticScore";
 import Emoji from "./Emoji";
+import PlatformIconList from "./PlatformIconList";
 
 interface Props {
 	game: Game;
 }
 
 const GameCard = ({ game }: Props) => {
+	const navigate = useNavigate();
 	return (
-		<Card height={"100%"}>
+		<Card
+			height={"100%"}
+			onClick={() => navigate("/games/" + game.slug)}
+			cursor={"pointer"}
+		>
 			<Image
 				src={getCroppedImageUrl(game.background_image)}
 				alt={game.name}
@@ -23,7 +29,9 @@ const GameCard = ({ game }: Props) => {
 					/>
 					<CriticScore score={game.metacritic} />
 				</HStack>
-				<Heading fontSize="2xl">{game.name}</Heading>
+				<Heading fontSize="2xl">
+					<Link to={`/games/${game.slug}`}>{game.name}</Link>
+				</Heading>
 				<Emoji rating={game.rating_top} />
 			</CardBody>
 		</Card>

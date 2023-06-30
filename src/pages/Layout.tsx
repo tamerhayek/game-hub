@@ -1,12 +1,14 @@
+import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Description";
 
 const Layout = () => {
 	return (
 		<>
 			<Navbar />
-			<Outlet />
+			<Box padding={3}>
+				<Outlet />
+			</Box>
 		</>
 	);
 };

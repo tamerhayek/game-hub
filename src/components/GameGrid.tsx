@@ -36,6 +36,7 @@ const GameGrid = () => {
 				spacing={3}
 				paddingX={3}
 				alignItems={"stretch"}
+				paddingTop={2}
 			>
 				{data?.pages.map((page, index) => (
 					<React.Fragment key={index}>
