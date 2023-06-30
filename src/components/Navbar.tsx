@@ -1,6 +1,7 @@
 import { Box, HStack, Image, Show } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
+import Description from "./Description";
 import SearchInput from "./SearchInput";
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
 			<Show below="lg">
 				<SearchInput />
 			</Show>
+			<Description />
 		</Box>
 	);
 };
