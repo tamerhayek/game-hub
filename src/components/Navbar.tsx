@@ -1,22 +1,25 @@
-import { Box, HStack, Image, Show } from "@chakra-ui/react";
+import { Box, HStack, Image, Link, Show } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
-import Description from "./Description";
 import SearchInput from "./SearchInput";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-	const navigate = useNavigate();
 	return (
-		<Box padding={"10px"}>
-			<HStack justifyContent="space-between" spacing={10}>
-				<Image
-					src={logo}
-					alt="Logo"
-					boxSize="60px"
-					cursor={"pointer"}
-					onClick={() => navigate("/")}
-				/>
+		<Box padding={5}>
+			<HStack
+				justifyContent="space-between"
+				alignItems={"center"}
+				spacing={10}
+			>
+				<Link href="/">
+					<Image
+						src={logo}
+						alt="Logo"
+						cursor={"pointer"}
+						boxSize={"60px"}
+						objectFit={"contain"}
+					/>
+				</Link>
 				<Show above="lg">
 					<SearchInput />
 				</Show>
@@ -25,7 +28,6 @@ const Navbar = () => {
 			<Show below="lg">
 				<SearchInput />
 			</Show>
-			<Description />
 		</Box>
 	);
 };

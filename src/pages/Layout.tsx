@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Banner from "../components/Banner";
 
 const Layout = () => {
 	return (
@@ -9,6 +10,7 @@ const Layout = () => {
 			<Box padding={3}>
 				<Outlet />
 			</Box>
+			<Banner />
 		</>
 	);
 };
