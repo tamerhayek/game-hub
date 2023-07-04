@@ -17,7 +17,7 @@ const Banner = () => {
 			zIndex={50}
 			justifyContent={"center"}
 			alignItems={"center"}
-			bgColor={"teal.900"}
+			bgColor={"gray.700"}
 			padding={5}
 			w="full"
 		>
@@ -54,7 +54,7 @@ const Banner = () => {
 			<Button
 				rounded={"full"}
 				padding={3}
-				bgColor={"teal.900"}
+				bgColor={"gray.700"}
 				onClick={() => setIsBannerOpen(false)}
 			>
 				<BiX size={"30px"} />
