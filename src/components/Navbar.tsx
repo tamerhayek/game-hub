@@ -1,4 +1,5 @@
-import { Box, HStack, Image, Link, Show } from "@chakra-ui/react";
+import { Box, HStack, Image, Show } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
@@ -11,13 +12,13 @@ const Navbar = () => {
 				alignItems={"center"}
 				spacing={10}
 			>
-				<Link href="/">
+				<Link to="/">
 					<Image
 						src={logo}
 						alt="Logo"
 						cursor={"pointer"}
 						boxSize={"60px"}
-						objectFit={"contain"}
+						objectFit={"cover"}
 					/>
 				</Link>
 				<Show above="lg">
